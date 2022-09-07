@@ -1,0 +1,142 @@
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    font-family: "Cormorant", serif;
+}
+
+#main-images {
+    width: 100%;
+    height: 100vh;
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+}
+
+#next,
+#back {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(122, 121, 121, 0.79);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.fa-solid {
+    color: white;
+    font-size: 2rem;
+}
+
+#thumbnails-container {
+    position: absolute;
+    bottom: 50px;
+    width: 700px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    display: flex;
+
+    z-index: 10;
+}
+
+#thumbnails-container > div {
+    width: 140px;
+    height: 70px;
+}
+
+#thumb-1 {
+    background-image: url("http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg");
+    background-size: cover;
+}
+
+#thumb-2 {
+    background-image: url("https://static1.evcdn.net/images/reduction/1513757_w-1920_h-1080_q-70_m-crop.jpg");
+    background-size: cover;
+}
+
+#thumb-3 {
+    background-image: url("https://img.itinari.com/pages/images/original/0d3ed180-d22d-48e8-84df-19c4d888b41f-62-crop.jpg?ch=DPR&dpr=2.625&w=1600&s=7ebd4b5a9e045f41b4e0c7c75d298d6c");
+    background-size: cover;
+}
+
+#thumb-4 {
+    background-image: url("https://static1.evcdn.net/images/reduction/1583177_w-1920_h-1080_q-70_m-crop.jpg");
+    background-size: cover;
+}
+
+#thumb-5 {
+    background-image: url("https://cdn.sanity.io/images/24oxpx4s/prod/ed09eff0362396772ad50ec3bfb728d332eb1c30-3200x2125.jpg?w=1600&h=1063&fit=crop");
+    background-size: cover;
+}
+
+#selector {
+    position: absolute;
+    left: 0;
+    -webkit-box-shadow: inset 0px 0px 0px 4px rgb(255, 255, 255);
+    -moz-box-shadow: inset 0px 0px 0px 4px rgb(255, 255, 255);
+    box-shadow: inset 0px 0px 0px 4px rgb(255, 255, 255);
+
+    transition: all 0.5s ease-in-out;
+}
+
+.content {
+    width: 50%;
+    text-align: center;
+    color: white;
+    z-index: 10;
+}
+
+#country-name {
+    font-size: 8rem;
+}
+
+#country-description {
+    font-size: 1.3rem;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.575);
+}
+
+#auto-slide {
+    width: 50px;
+    height: 50px;
+
+    margin: 30px;
+    background-color: rgba(122, 121, 121, 0.79);
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    z-index: 10;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+}
+
+#auto-slide .fa-solid {
+    font-size: 1.3rem;
+}
+
+.red {
+    background-color: red !important;
+}
