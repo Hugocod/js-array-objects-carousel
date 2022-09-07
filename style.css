@@ -87,7 +87,7 @@ body {
     -moz-box-shadow: inset 0px 0px 0px 4px rgb(255, 255, 255);
     box-shadow: inset 0px 0px 0px 4px rgb(255, 255, 255);
 
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .content {
@@ -115,11 +115,12 @@ body {
 }
 
 #auto-slide {
-    width: 50px;
-    height: 50px;
+    width: fit-content;
+    height: fit-content;
 
     margin: 30px;
-    background-color: rgba(122, 121, 121, 0.79);
+    padding: 5px 20px;
+
     position: absolute;
     top: 0;
     right: 0;
@@ -130,13 +131,26 @@ body {
     justify-content: center;
     align-items: center;
 
-    border-radius: 50%;
+    border-radius: 1rem;
+
+    color: white;
 }
 
 #auto-slide .fa-solid {
     font-size: 1.3rem;
+
+    background-color: rgba(122, 121, 121, 0.79);
+    padding: 15px;
+
+    border-radius: 25%;
+}
+
+#auto-slide > h2 {
+    font-size: 0.8rem;
+    margin: 10px;
+    text-transform: uppercase;
 }
 
 .red {
-    background-color: red !important;
+    background-color: rgb(207, 58, 58) !important;
 }

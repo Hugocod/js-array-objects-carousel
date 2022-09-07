@@ -27,6 +27,7 @@ let selector = document.getElementById("selector");
 const countryName = document.getElementById("country-name");
 const countryDescription = document.getElementById("country-description");
 const autoBtn = document.getElementById("auto-slide");
+const autoDirection = document.getElementById("auto-direction");
 
 /* Queste istruzioni settano le informazioni di partenza, prese dal primo oggetto, di title, description e url */
 let index = 0; /*  indice */
@@ -95,8 +96,10 @@ autoBtn.addEventListener("click", () => {
         next.style.visibility = "hidden";
         back.style.visibility = "hidden";
 
-        autoBtn.innerHTML = '<i class="fa-solid fa-angles-left"></i>';
-        autoBtn.classList.add("red");
+        autoBtn.innerHTML = `
+        <h2 id="auto-direction">Indietro</h2>
+        <i class="fa-solid fa-angles-left"></i>
+        `;
 
         clearInterval(slideBack); /* stoppo il potenziale aperto clear interval */
 
@@ -118,7 +121,10 @@ autoBtn.addEventListener("click", () => {
         next.style.visibility = "hidden";
         back.style.visibility = "hidden";
 
-        autoBtn.innerHTML = '<i class="fa-solid fa-stop"></i>';
+        autoBtn.innerHTML = `
+        <h2 id="auto-direction">stop</h2>
+        <i class="fa-solid fa-stop"></i>
+        `;
 
         clearInterval(slideNext); /* stoppo il potenziale aperto clear interval */
 
@@ -143,7 +149,11 @@ autoBtn.addEventListener("click", () => {
         next.style.visibility = "visible";
         back.style.visibility = "visible";
 
-        autoBtn.innerHTML = '<i class="fa-solid fa-angles-right"></i>';
+        autoBtn.innerHTML = `
+        
+        <h2 id="auto-direction">Avanti</h2>
+        <i class="fa-solid fa-angles-right"></i>
+        `;
 
         autoBtn.classList.remove("red");
 
