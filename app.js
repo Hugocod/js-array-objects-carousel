@@ -48,12 +48,11 @@ countryDescription.innerText = `${slides[index].description}`;
 
 /* scorrere avanti */
 next.addEventListener("click", () => {
-    /*--------------------------------------------- resetta se arrivi alla fine dell'array */
+    /* resetta se arrivi alla fine dell'array */
     index === slides.length - 1 ? (index = 0) : index++;
 
-    mainImages.style.backgroundImage = `url(${slides[index].url})`;
-    countryName.innerText = `${slides[index].title}`;
-    countryDescription.innerText = `${slides[index].description}`;
+    /*  mostro le in info ricavate nell'html */
+    displayInfoIntoHtml(index);
 
     /* funzione che fa muovere il selettore */
     moveSelector(index);
@@ -61,12 +60,11 @@ next.addEventListener("click", () => {
 
 /* scorrere indietro */
 back.addEventListener("click", () => {
-    /*--------------------------------------------- resetta se arrivi all'inizio fine dell'array */
+    /* resetta se arrivi all'inizio fine dell'array */
     index === 0 ? (index = slides.length - 1) : index--;
 
-    mainImages.style.backgroundImage = `url(${slides[index].url})`;
-    countryName.innerText = `${slides[index].title}`;
-    countryDescription.innerText = `${slides[index].description}`;
+    /*  mostro le in info ricavate nell'html */
+    displayInfoIntoHtml(index);
 
     /* funzione che fa muovere il selettore */
     moveSelector(index);
@@ -106,9 +104,9 @@ autoBtn.addEventListener("click", () => {
         /* lancio il nuovo set interval */
         slideNext = setInterval(() => {
             index === slides.length - 1 ? (index = 0) : index++;
-            mainImages.style.backgroundImage = `url(${slides[index].url})`;
-            countryName.innerText = `${slides[index].title}`;
-            countryDescription.innerText = `${slides[index].description}`;
+
+            /*  mostro le in info ricavate nell'html */
+            displayInfoIntoHtml(index);
 
             /* funzione che fa muovere il selettore */
             moveSelector(index);
@@ -131,9 +129,9 @@ autoBtn.addEventListener("click", () => {
         /* lancio il nuovo set interval */
         slideBack = setInterval(() => {
             index === 0 ? (index = slides.length - 1) : index--;
-            mainImages.style.backgroundImage = `url(${slides[index].url})`;
-            countryName.innerText = `${slides[index].title}`;
-            countryDescription.innerText = `${slides[index].description}`;
+
+            /*  mostro le in info ricavate nell'html */
+            displayInfoIntoHtml(index);
 
             /* funzione che fa muovere il selettore */
             moveSelector(index);
@@ -185,4 +183,10 @@ function moveSelector(index) {
     } else if (index === 4) {
         selector.style.left = "560px";
     }
+}
+
+function displayInfoIntoHtml(index) {
+    mainImages.style.backgroundImage = `url(${slides[index].url})`;
+    countryName.innerText = `${slides[index].title}`;
+    countryDescription.innerText = `${slides[index].description}`;
 }
