@@ -99,6 +99,7 @@ autoBtn.addEventListener("click", () => {
         <i class="fa-solid fa-angles-left"></i>
         `;
 
+        document.querySelector(".fa-angles-left").classList.add("red");
         clearInterval(slideBack); /* stoppo il potenziale aperto clear interval */
 
         /* lancio il nuovo set interval */
@@ -124,6 +125,7 @@ autoBtn.addEventListener("click", () => {
         <i class="fa-solid fa-stop"></i>
         `;
 
+        document.querySelector(".fa-stop").classList.add("red");
         clearInterval(slideNext); /* stoppo il potenziale aperto clear interval */
 
         /* lancio il nuovo set interval */
@@ -152,8 +154,6 @@ autoBtn.addEventListener("click", () => {
         <h2 id="auto-direction">Avanti</h2>
         <i class="fa-solid fa-angles-right"></i>
         `;
-
-        autoBtn.classList.remove("red");
 
         autoIsClicked = 0; /* resetto il conto dei click */
     }
